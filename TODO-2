@@ -1,0 +1,33 @@
+2.0.0-RC1
+DONE	- fix increment value/chunk to former version using // for division (PmwCounter.py)
+DONE	- fix fmt back to "separator" - PmwEntryField.py,  421c424 
+DONE	- move configure outside if statement - PmwGroup.py, 110c123,126
+DONE	- fix public interface of PmwHistoryText.py - __next__ back to next()
+DONE	- fix public interface of date functions to use 'format' kw (if works correctly) so as to respect the public interface
+DONE	- fix porting bugs in demos (atoi/string.find in pmwcounterdialog)
+DONE	- fix bug in PmwTimeCounter (increment/decrement buttons do not work correctly) RESOLUTION: use integer division operator // instead of / (conversion problems)
+DONE	- fix bug in PmwBase.py (_traceTkFile does not seem to exist)  RESOLUTION: tk no longer enables trace by default; do not assume that in PmwBase trace
+DONE	- search code (lib/demos/...) for string. , atoi, atof and other deprecated code
+DONE	- port documentation files
+DONE	- complete maketar.py
+DONE	- check BLT status/solutions
+DONE	- fix atoi in BLT demos
+DONE	- fix crash when exiting demos/All.py with Balloon demo selected (PyEval_RestoreThread: NULL tstate) SOLUTION: Call root.destroy instead of sys.exit (original)
+DONE	- remove BLT tests from suite
+DONE	- remove BLT demos from suite
+DONE	- make BLT run (for the brave...)
+		- add BLT functionality waiver
+DONE	- add BLT enable option - call Pmw.Blt.setBltDisable(window, False)
+DONE	- add BLT enable to Blt_test (call to Test.enableBlt must be uncommented for test to work!!!)
+DONE	- fix bug #42 (atof in ScrolledFrame)
+
+2.0.0-release
+	- migrate contrib to lib, tests and demos
+	- update docsrc/text/bugs_text and changes_text
+	- update Pmw.announce
+	- PyPi support
+	- check Python version on Install
+	
+
+Future
+	- ttk support?
