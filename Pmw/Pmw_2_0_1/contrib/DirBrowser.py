@@ -195,7 +195,10 @@ class DirBrowserDialog(Pmw.MegaToplevel):
 
         self.listbox.setlist(dirlist)
         pathlist = []
+        drives = [chr(x) + ":\\" for x in range(65,91) if os.path.exists(chr(x) + ":")]
         while path != '/':
+            if path in drives:
+                break
             pathlist.append(path)
             path = os.path.dirname(path)
         pathlist.append('/')
